@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="DAO.Candidat" table="CANDIDATS" >
+
+	<id name="idUtilisateur" column="ID_UTILISATEUR"  >
+		<generator class="native"></generator>
+	</id>
+	
+	<property name="nom"></property>
+	<property name="prenom"></property>
+	<property name="email"></property>
+	<property name="passWord"></property>
+	<property name="tel"></property>
+	<property name="ville"></property>
+	<property name="codePostal"></property>
+	<property name="pays"></property>
+	<property name="specialites"></property>
+	<property name="description"></property>
+	<property name="cvChemin"></property>
+	
+	
+	
+	<set name="diplomes" table="CANDIDAT_DIPLOME">
+            <key column="ID_UTILISATEUR"/>
+            <element type="string" column="DIPLOME"/>
+        </set>
+        
+    <set name="motsCles" table="CANDIDAT_MOTS_CLES">
+            <key column="ID_UTILISATEUR"/>
+            <element type="string" column="MOTS_CLES"/>
+        </set>  
+          
+    <set name="candidatures" inverse="true" >
+        <key column="ID_CANDIDAT"/>
+        <one-to-many class="DAO.Candidature" />
+    </set>
+	
+</class>
+ 
+  
+</hibernate-mapping>

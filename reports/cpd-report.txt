@@ -1,0 +1,892 @@
+Found a 40 line (139 tokens) duplication in the following files: 
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Utilisateur.java
+Starting at line 60 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+	}
+	
+	//Getters and Setters
+	
+	public Long getIdUtilisateur() {
+		return idUtilisateur;
+	}
+	public void setIdUtilisateur(Long idUtilisateur) {
+		this.idUtilisateur = idUtilisateur;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassWord() {
+		return passWord;
+	}
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+=====================================================================
+Found a 44 line (139 tokens) duplication in the following files: 
+Starting at line 25 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 61 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+public Long getIdUtilisateur() {
+		return idUtilisateur;
+	}
+	public void setIdUtilisateur(Long idUtilisateur) {
+		this.idUtilisateur = idUtilisateur;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassWord() {
+		return passWord;
+	}
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+
+
+
+
+//Constructeurs
+
+public Recruteur() {
+=====================================================================
+Found a 36 line (138 tokens) duplication in the following files: 
+Starting at line 28 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Utilisateur.java
+Starting at line 25 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+
+	public Long getIdUtilisateur() {
+		return idUtilisateur;
+	}
+	public void setIdUtilisateur(Long idUtilisateur) {
+		this.idUtilisateur = idUtilisateur;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassWord() {
+		return passWord;
+	}
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+=====================================================================
+Found a 32 line (119 tokens) duplication in the following files: 
+Starting at line 49 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionRecruteur.java
+Starting at line 70 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionCandidat.java
+
+		String resultat;
+		Map<String, String> erreurs = new HashMap<String, String>();
+		/* R�cup�ration des champs du formulaire. */
+
+		/* Validation du champ email. */
+		try {
+			Validation.validationEmail(email);
+		} catch (Exception e) {
+			erreurs.put(email, e.getMessage());
+		}
+		/* Validation des champs mot de passe et confirmation. */
+		try {
+			Validation.validationMotsDePasse(passWord, confirmation);
+		} catch (Exception e) {
+			erreurs.put(passWord, e.getMessage());
+		}
+
+		/* Initialisation du r�sultat global de la validation. */
+		if (erreurs.isEmpty()) {
+			resultat = "Succ�s de l'inscription.";
+		} else {
+			resultat = "�chec de l'inscription.";
+		}
+		/*
+		 * Stockage du r�sultat et des messages d'erreur dans l'objet request
+		 */
+		req.setAttribute(ATT_ERREURS, erreurs);
+		req.setAttribute(ATT_RESULTAT, resultat);
+
+		/****************************************************************************/
+		// Creation des objets
+		if (resultat == "Succ�s de l'inscription.") {
+=====================================================================
+Found a 16 line (73 tokens) duplication in the following files: 
+Starting at line 75 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 96 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+
+		String paysEntreprise, String codePostal, String descriptionEntreprise,
+		Set<String> motsCles) {
+	super();
+	this.nom = nom;
+	this.prenom = prenom;
+	this.email = email;
+	this.passWord = passWord;
+	this.tel = tel;
+	this.nomEntreprise = nomEntreprise;
+	this.adresseEntreprise = adresseEntreprise;
+	this.siteWebEntreprise = siteWebEntreprise;
+	this.villeEntreprise = villeEntreprise;
+	this.paysEntreprise = paysEntreprise;
+	this.codePostal = codePostal;
+	this.descriptionEntreprise = descriptionEntreprise;
+	this.motsCles = motsCles;
+=====================================================================
+Found a 11 line (73 tokens) duplication in the following files: 
+Starting at line 34 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierRecruteur.java
+Starting at line 31 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionRecruteur.java
+
+		String email = req.getParameter("email");
+
+		String tel = req.getParameter("tel");
+		String nomEntreprise = req.getParameter("nomEntreprise");
+		String adresseEntreprise = req.getParameter("adresseEntreprise");
+		String siteWebEntreprise = req.getParameter("siteWebEntreprise");
+		String villeEntreprise = req.getParameter("villeEntreprise");
+		String paysEntreprise = req.getParameter("paysEntreprise");
+		String codePostal = req.getParameter("codePostal");
+		String descriptionEntreprise = req
+				.getParameter("descriptionEntreprise");
+=====================================================================
+Found a 14 line (59 tokens) duplication in the following files: 
+Starting at line 108 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Offre.java
+Starting at line 132 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+}
+public Set<String> getMotsCles() {
+	return motsCles;
+}
+public void setMotsCles(Set<String> motsCles) {
+	this.motsCles = motsCles;
+}
+
+public Set<Candidature> getCandidatures() {
+	return candidatures;
+}
+public void setCandidatures(Set<Candidature> candidatures) {
+	this.candidatures = candidatures;
+}
+=====================================================================
+Found a 10 line (57 tokens) duplication in the following files: 
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionRecruteur.java
+Starting at line 31 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionCandidat.java
+
+		Services s = new Services();
+
+		// Recuperer les informations
+		String nom = req.getParameter("nom");
+		String prenom = req.getParameter("prenom");
+		String email = req.getParameter("email");
+		String passWord = req.getParameter("passWord");
+		String confirmation = req.getParameter("confirmation");
+		String tel = req.getParameter("tel");
+		String nomEntreprise = req.getParameter("nomEntreprise");
+=====================================================================
+Found a 11 line (53 tokens) duplication in the following files: 
+Starting at line 88 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 105 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+	public Candidat getCandidatById(Long id) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.flush();
+		session.clear();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+=====================================================================
+Found a 11 line (50 tokens) duplication in the following files: 
+Starting at line 88 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 105 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 274 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+	public Candidat getCandidatById(Long id) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.flush();
+		session.clear();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+=====================================================================
+Found a 10 line (48 tokens) duplication in the following files: 
+Starting at line 121 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 137 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+	public Recruteur getRecruteurById2(Long id) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.flush();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+=====================================================================
+Found a 10 line (45 tokens) duplication in the following files: 
+Starting at line 48 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierOffre.java
+Starting at line 23 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Confirmer.java
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+
+		Services s = new Services();
+		HttpSession httpsession = req.getSession();
+		Recruteur r = (Recruteur) httpsession.getAttribute("recruteur");
+		// Recruteur recruteur = s.getRecruteurById(r.getIdUtilisateur());
+		Long l = Long.parseLong(req.getParameter("id"));
+=====================================================================
+Found a 11 line (45 tokens) duplication in the following files: 
+Starting at line 15 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/DetailsOffre.java
+Starting at line 13 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/CandidatDetails.java
+
+public class DetailsOffre extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// String pathInfo = req.getPathInfo(); // /{value}/test
+		// String[] pathParts = pathInfo.split("/");
+		String id = req.getParameter("id");		
+		Services s = new Services();
+		Long l = Long.parseLong(id);
+=====================================================================
+Found a 7 line (44 tokens) duplication in the following files: 
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/SupprimerOffre.java
+Starting at line 38 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/NouvelleOffre.java
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		Services s = new Services();
+		HttpSession mysession = req.getSession();
+
+		Recruteur r = (Recruteur) mysession.getAttribute("recruteur");
+=====================================================================
+Found a 12 line (44 tokens) duplication in the following files: 
+Starting at line 16 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Offres.java
+Starting at line 16 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/AllOffers.java
+
+public class Offres extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		Services s = new Services();
+		// String filter = req.getParameter("ville");
+		List<Offre> Offres = new ArrayList<Offre>();
+
+		// if(filter == null || filter=="")
+		Offres = s.getLastOffers();
+=====================================================================
+Found a 6 line (44 tokens) duplication in the following files: 
+Starting at line 41 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierCandidat.java
+Starting at line 37 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionCandidat.java
+
+		motcles = motcles.toLowerCase();
+		String tel = req.getParameter("tel");
+		String ville = req.getParameter("ville");
+		String codePostal = req.getParameter("codePostal");
+		String pays = req.getParameter("pays");
+		String specialites = req.getParameter("specialite");
+=====================================================================
+Found a 13 line (43 tokens) duplication in the following files: 
+Starting at line 109 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 124 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+		session.clear();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Recruteur r = (Recruteur) session.get(Recruteur.class, id);
+
+		return r;
+
+	}
+	public Recruteur getRecruteurById2(Long id) {
+=====================================================================
+Found a 8 line (42 tokens) duplication in the following files: 
+Starting at line 69 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 91 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+
+	super();}
+
+
+public Recruteur(String nom, String prenom, String email, String passWord,
+		String tel, String nomEntreprise, String adresseEntreprise,
+		String siteWebEntreprise, String villeEntreprise,
+		String paysEntreprise, String codePostal, String descriptionEntreprise,
+		Set<String> motsCles) {
+=====================================================================
+Found a 7 line (39 tokens) duplication in the following files: 
+Starting at line 49 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierOffre.java
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Confirmer.java
+Starting at line 25 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/AcceuilRecruteur.java
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+
+		Services s = new Services();
+		HttpSession httpsession = req.getSession();
+		Recruteur r = (Recruteur) httpsession.getAttribute("recruteur");
+=====================================================================
+Found a 9 line (38 tokens) duplication in the following files: 
+Starting at line 17 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 204 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+	public void addCandidat(Candidat c) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(c);
+		session.beginTransaction().commit(); // utilisée lorsqu'on veut modifier
+												// la BD
+	}
+
+	public void addRecruteur(Recruteur r) {
+=====================================================================
+Found a 9 line (38 tokens) duplication in the following files: 
+Starting at line 220 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 236 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+	public void updateCandidat(Candidat c) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.update(c);
+		session.beginTransaction().commit();
+
+	}
+
+	public void updateRecruteur(Recruteur r) {
+=====================================================================
+Found a 9 line (38 tokens) duplication in the following files: 
+Starting at line 75 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 96 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 36 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+		String paysEntreprise, String codePostal, String descriptionEntreprise,
+		Set<String> motsCles) {
+	super();
+	this.nom = nom;
+	this.prenom = prenom;
+	this.email = email;
+	this.passWord = passWord;
+	this.tel = tel;
+	this.nomEntreprise = nomEntreprise;
+=====================================================================
+Found a 9 line (36 tokens) duplication in the following files: 
+Starting at line 20 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/SupprimerOffre.java
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierRecruteur.java
+
+public class SupprimerOffre extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		Services s = new Services();
+		HttpSession mysession = req.getSession();
+
+		Recruteur r = (Recruteur) mysession.getAttribute("recruteur");
+=====================================================================
+Found a 7 line (35 tokens) duplication in the following files: 
+Starting at line 20 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/SupprimerOffre.java
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Postuler.java
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierRecruteur.java
+Starting at line 27 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierCandidat.java
+
+public class SupprimerOffre extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		Services s = new Services();
+		HttpSession mysession = req.getSession();
+=====================================================================
+Found a 11 line (34 tokens) duplication in the following files: 
+Starting at line 34 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/NouvelleOffre.java
+Starting at line 43 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierOffre.java
+
+		req.getRequestDispatcher(VUE).forward(req, resp);
+
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+
+		Services s = new Services();
+
+		HttpSession mysession = req.getSession();
+=====================================================================
+Found a 5 line (33 tokens) duplication in the following files: 
+Starting at line 76 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 244 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+	public void addOffreToRecruteur(Long idO, Long idR) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+
+		Offre o = (Offre) session.get(Offre.class, idO);
+=====================================================================
+Found a 8 line (33 tokens) duplication in the following files: 
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Postuler.java
+Starting at line 26 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionCandidat.java
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		Services s = new Services();
+		HttpSession mysession = req.getSession();
+		// String ou = req.getHeader("referer");
+		// String[] pathParts = ou.split("/");
+		String id = req.getParameter("id");
+=====================================================================
+Found a 8 line (33 tokens) duplication in the following files: 
+Starting at line 38 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/NouvelleOffre.java
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierRecruteur.java
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+
+		Services s = new Services();
+
+		HttpSession mysession = req.getSession();
+		Recruteur r = (Recruteur) mysession.getAttribute("recruteur");
+=====================================================================
+Found a 4 line (32 tokens) duplication in the following files: 
+Starting at line 179 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/UploadForm.java
+Starting at line 86 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierCandidat.java
+
+		for (String contentDisposition : part.getHeader("content-disposition")
+				.split(";")) {
+			/* Recherche de l'éventuelle présence du paramètre "filename". */
+			if (contentDisposition.trim().startsWith("filename")) {
+=====================================================================
+Found a 5 line (32 tokens) duplication in the following files: 
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/SupprimerOffre.java
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierRecruteur.java
+Starting at line 26 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionCandidat.java
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		Services s = new Services();
+		HttpSession mysession = req.getSession();
+=====================================================================
+Found a 5 line (32 tokens) duplication in the following files: 
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Postuler.java
+Starting at line 38 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/NouvelleOffre.java
+Starting at line 29 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierCandidat.java
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		Services s = new Services();
+		HttpSession mysession = req.getSession();
+=====================================================================
+Found a 6 line (31 tokens) duplication in the following files: 
+Starting at line 60 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Connexion.java
+Starting at line 74 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Connexion.java
+
+			httpsession.setAttribute("candidat", c);
+			httpsession.setAttribute("togo", ToGo);
+			getServletContext().getRequestDispatcher(
+					"/WEB-INF/common/login.jsp").forward(request, response);
+		} else {
+			httpsession.setAttribute("candidat", null);
+=====================================================================
+Found a 7 line (30 tokens) duplication in the following files: 
+Starting at line 17 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Utilisateur.java
+Starting at line 76 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 96 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 37 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+			String passWord, String tel) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.passWord = passWord;
+		this.tel = tel;
+=====================================================================
+Found a 7 line (30 tokens) duplication in the following files: 
+Starting at line 162 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 108 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Offre.java
+Starting at line 132 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+}
+public Set<String> getMotsCles() {
+	return motsCles;
+}
+public void setMotsCles(Set<String> motsCles) {
+	this.motsCles = motsCles;
+}
+=====================================================================
+Found a 6 line (30 tokens) duplication in the following files: 
+Starting at line 29 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Offre.java
+Starting at line 45 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Offre.java
+
+	this.titre = titre;
+	this.date = date;
+	this.description = description;
+	this.etatOffre = etatOffre;
+	this.expiration = expiration;
+	this.motsCles = motsCles;
+=====================================================================
+Found a 5 line (30 tokens) duplication in the following files: 
+Starting at line 36 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierCandidat.java
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionRecruteur.java
+Starting at line 31 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionCandidat.java
+
+		String OldCv = candidat.getCvChemin();
+		String nom = req.getParameter("nom");
+		String prenom = req.getParameter("prenom");
+		String email = req.getParameter("email");
+		String motcles = req.getParameter("skills");
+=====================================================================
+Found a 5 line (29 tokens) duplication in the following files: 
+Starting at line 344 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 348 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+			if (o.getDescription().toLowerCase().contains(mot.toLowerCase())) {
+				offres.add(o);
+				continue;
+			}
+			if (o.getTitre().toLowerCase().contains(mot.toLowerCase())) {
+=====================================================================
+Found a 6 line (29 tokens) duplication in the following files: 
+Starting at line 370 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 376 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 387 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 392 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+				if (c.getDescription().toLowerCase()
+						.contains(mot.toLowerCase())) {
+					candidats.add(c);
+					continue;
+				}
+			if (c.getSpecialites() != null)
+=====================================================================
+Found a 9 line (29 tokens) duplication in the following files: 
+Starting at line 16 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Offres.java
+Starting at line 14 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Candidats.java
+Starting at line 16 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/AllOffers.java
+
+public class Offres extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		Services s = new Services();
+		// String filter = req.getParameter("ville");
+		List<Offre> Offres = new ArrayList<Offre>();
+=====================================================================
+Found a 8 line (29 tokens) duplication in the following files: 
+Starting at line 29 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierRecruteur.java
+Starting at line 36 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierCandidat.java
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionRecruteur.java
+Starting at line 31 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionCandidat.java
+
+		Recruteur recruteur = (Recruteur) mysession.getAttribute("recruteur");
+
+		// Recuperer les informations
+		String nom = req.getParameter("nom");
+		String prenom = req.getParameter("prenom");
+		String email = req.getParameter("email");
+
+		String tel = req.getParameter("tel");
+=====================================================================
+Found a 2 line (28 tokens) duplication in the following files: 
+Starting at line 16 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Offre.java
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+private Set<String> motsCles = new HashSet<String>();
+private Set<Candidature> candidatures = new HashSet<Candidature>();
+=====================================================================
+Found a 7 line (28 tokens) duplication in the following files: 
+Starting at line 20 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/SupprimerOffre.java
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Postuler.java
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierRecruteur.java
+Starting at line 27 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierCandidat.java
+Starting at line 21 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Confirmer.java
+
+public class SupprimerOffre extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		Services s = new Services();
+		HttpSession mysession = req.getSession();
+=====================================================================
+Found a 5 line (28 tokens) duplication in the following files: 
+Starting at line 28 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/SupprimerOffre.java
+Starting at line 55 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierOffre.java
+
+		Recruteur r = (Recruteur) mysession.getAttribute("recruteur");
+
+		/* s.deleteOffreById(Long.parseLong(request.getParameter("idso"))); */
+		Long l = Long.parseLong(req.getParameter("id"));
+		Offre o = s.getOffreById(l);
+=====================================================================
+Found a 8 line (28 tokens) duplication in the following files: 
+Starting at line 20 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierOffre.java
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/AcceuilCandidat.java
+
+public class ModifierOffre extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// Services s = new Services();
+		HttpSession httpsession = req.getSession();
+=====================================================================
+Found a 7 line (28 tokens) duplication in the following files: 
+Starting at line 18 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/DetailsOffre.java
+Starting at line 39 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/DetailsOffre.java
+Starting at line 16 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/CandidatDetails.java
+
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// String pathInfo = req.getPathInfo(); // /{value}/test
+		// String[] pathParts = pathInfo.split("/");
+		String id = req.getParameter("id");		
+		Services s = new Services();
+=====================================================================
+Found a 4 line (27 tokens) duplication in the following files: 
+Starting at line 88 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 105 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 121 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 137 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+	public Candidat getCandidatById(Long id) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.flush();
+=====================================================================
+Found a 3 line (27 tokens) duplication in the following files: 
+Starting at line 35 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/SupprimerOffre.java
+Starting at line 39 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Confirmer.java
+
+		Recruteur recruteur = s.getRecruteurById2(r.getIdUtilisateur());
+		Set<Offre> ofs = new HashSet<Offre>();
+		ofs = recruteur.getOffres();
+=====================================================================
+Found a 7 line (27 tokens) duplication in the following files: 
+Starting at line 16 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Offres.java
+Starting at line 14 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Candidats.java
+Starting at line 16 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/AllOffers.java
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/AcceuilRecruteur.java
+
+public class Offres extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		Services s = new Services();
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 33 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Utilisateur.java
+Starting at line 30 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 28 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Fichier.java
+Starting at line 66 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 144 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Recruteur.java
+Starting at line 102 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+}
+public String getCodePostal() {
+	return codePostal;
+}
+public void setCodePostal(String codePostal) {
+	this.codePostal = codePostal;
+}
+public String getDescriptionEntreprise() {
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 84 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Offre.java
+Starting at line 48 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidature.java
+
+}
+public Date getDate() {
+	return date;
+}
+public void setDate(Date date) {
+	this.date = date;
+}
+public String getDescription() {
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 90 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Offre.java
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Fichier.java
+
+}
+public String getDescription() {
+	return description;
+}
+public void setDescription(String description) {
+	this.description = description;
+}
+public String getEtatOffre() {
+=====================================================================
+Found a 5 line (26 tokens) duplication in the following files: 
+Starting at line 187 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/UploadForm.java
+Starting at line 94 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierCandidat.java
+
+				return contentDisposition
+						.substring(contentDisposition.indexOf('=') + 1).trim()
+						.replace("\"", "");
+			}
+		}
+=====================================================================
+Found a 4 line (25 tokens) duplication in the following files: 
+Starting at line 52 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 58 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 64 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 70 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+	public List<Candidat> getAllCandidats() {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		return session.createQuery("from Candidat").list();
+=====================================================================
+Found a 6 line (25 tokens) duplication in the following files: 
+Starting at line 370 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 376 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 382 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 387 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+Starting at line 392 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Services/Services.java
+
+				if (c.getDescription().toLowerCase()
+						.contains(mot.toLowerCase())) {
+					candidats.add(c);
+					continue;
+				}
+			if (c.getSpecialites() != null)
+=====================================================================
+Found a 8 line (25 tokens) duplication in the following files: 
+Starting at line 90 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Offre.java
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Fichier.java
+Starting at line 120 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/DAO/Candidat.java
+
+}
+public String getDescription() {
+	return description;
+}
+public void setDescription(String description) {
+	this.description = description;
+}
+public String getEtatOffre() {
+=====================================================================
+Found a 5 line (25 tokens) duplication in the following files: 
+Starting at line 22 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/SupprimerOffre.java
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Postuler.java
+Starting at line 24 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierRecruteur.java
+Starting at line 48 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierOffre.java
+Starting at line 29 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/ModifierCandidat.java
+Starting at line 26 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/InscriptionCandidat.java
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		Services s = new Services();
+		HttpSession mysession = req.getSession();
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 38 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/NouvelleOffre.java
+Starting at line 23 of /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard/src/Controller/Confirmer.java
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+
+		Services s = new Services();
+
+		HttpSession mysession = req.getSession();

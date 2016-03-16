@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="DAO.Admin" table="ADMINS" >
+
+	<id name="idUtilisateur" column="ID_UTILISATEUR"  >
+		<generator class="native"></generator>
+	</id>
+	
+	<property name="nom"></property>
+	<property name="prenom"></property>
+	<property name="email"></property>
+	<property name="passWord"></property>
+	<property name="tel"></property>
+	
+	
+	
+  
+	
+</class>
+ 
+  
+</hibernate-mapping>

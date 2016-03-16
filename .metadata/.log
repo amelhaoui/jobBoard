@@ -1,0 +1,49 @@
+!SESSION 2015-05-02 23:17:14.064 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/Abderrahmane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -data /Users/Abderrahmane/Desktop/plugin/JobBoard-vf -product org.eclipse.epp.package.jee.product -keyring /Users/Abderrahmane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-05-02 23:17:19.676
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui.ide 4 4 2015-05-02 23:18:23.669
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2015-05-02 23:18:23.669
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2015-05-02 23:18:23.669
+!MESSAGE The project description file (.project) for 'RemoteSystemsTempFiles' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SESSION 2015-10-06 22:45:25.687 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/Abderrahmane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -data /Users/Abderrahmane/Documents/Rapport, Projets 2014:2015/PIntegre S4/JobBoard -product org.eclipse.epp.package.jee.product -keyring /Users/Abderrahmane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-10-06 22:45:27.729
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-06 22:45:31.069
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-10-06 22:46:39.664
+!MESSAGE Project facet com.ibm.etools.javaee.cdi has not been defined. It is used in plugin com.ibm.ws.st.jee.core.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-10-06 22:46:39.665
+!MESSAGE Project facet osgi.app has not been defined. It is used in plugin com.ibm.ws.st.osgi.core.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-10-06 22:46:39.665
+!MESSAGE Project facet osgi.bundle has not been defined. It is used in plugin com.ibm.ws.st.osgi.core.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-10-06 22:46:39.665
+!MESSAGE Project facet osgi.fragment has not been defined. It is used in plugin com.ibm.ws.st.osgi.core.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-10-06 22:46:39.666
+!MESSAGE Project facet osgi.subsystem has not been defined. It is used in plugin com.ibm.ws.st.osgi.core.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-10-06 22:46:39.666
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin org.cloudfoundry.ide.eclipse.server.branding.

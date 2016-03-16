@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="DAO.Offre" table="OFFRES" >
+
+	<id name="idOffre" column="ID_OFFRE"  >
+		<generator class="native"></generator>
+	</id>
+	
+	<property name="titre"></property>
+	<property name="date"></property>
+	<property name="description"></property>
+	<property name="etatOffre"></property>
+	<property name="expiration"></property>
+	<property name="ville"></property>
+	<property name="entreprise"></property>
+<many-to-one name="recruteur"   class="DAO.Recruteur" 
+        column="ID_R"
+        not-null="true" lazy="false"/>	
+		
+	
+	
+
+	
+   <set name="candidatures" inverse="true"  lazy="false">
+        <key column="ID_OFFRE"/>
+        <one-to-many class="DAO.Candidature" />
+    </set>
+        
+    <set name="motsCles" table="OFFRE_MOTS_CLES" lazy="false">
+            <key column="ID_Offre"/>
+            <element type="string" column="MOTS_CLES"/>
+        </set>    
+	
+</class>
+ 
+  
+</hibernate-mapping>

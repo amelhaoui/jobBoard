@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="DAO.Candidature" table="CANDIDATURES" >
+
+	<id name="idCandidature" column="ID_CANDIDATURE"  >
+		<generator class="native"></generator>
+	</id>
+	
+	<property name="date"></property>
+	<property name="etat"></property>
+	
+	<many-to-one name="candidat"   class="DAO.Candidat" 
+        column="ID_CANDIDAT"
+        not-null="true" lazy="false"/>
+        
+	<many-to-one name="offre"  class="DAO.Offre" 
+        column="ID_OFFRE"
+        not-null="true" lazy="false"/>
+	
+	
+</class>
+ 
+  
+</hibernate-mapping>

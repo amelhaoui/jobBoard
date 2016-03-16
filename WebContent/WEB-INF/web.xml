@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <servlet>
+  	<servlet-name>Start</servlet-name>
+  	<servlet-class>Controller.Start</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>Start</servlet-name>
+  	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>Rechercher</servlet-name>
+  	<servlet-class>Controller.Rechercher</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>Rechercher</servlet-name>
+  	<url-pattern>/search</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>AlOffres</servlet-name>
+  	<servlet-class>Controller.AllOffers</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>AlOffres</servlet-name>
+  	<url-pattern>/all-offres</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>Confirmer</servlet-name>
+  	<servlet-class>Controller.Confirmer</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>Confirmer</servlet-name>
+  	<url-pattern>/confirmer</url-pattern>
+  </servlet-mapping>
+    <servlet>
+  	<servlet-name>SupprimerOffre</servlet-name>
+  	<servlet-class>Controller.SupprimerOffre</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>SupprimerOffre</servlet-name>
+  	<url-pattern>/deleteOffre</url-pattern>
+  </servlet-mapping>
+    <servlet>
+  	<servlet-name>UpdateOffre</servlet-name>
+  	<servlet-class>Controller.ModifierOffre</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>UpdateOffre</servlet-name>
+  	<url-pattern>/updateOffre</url-pattern>
+  </servlet-mapping>
+   <servlet>
+  	<servlet-name>DetailsOffre</servlet-name>
+  	<servlet-class>Controller.DetailsOffre</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>DetailsOffre</servlet-name>
+  	<url-pattern>/offre</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Postuler</servlet-name>
+  	<url-pattern>/postuler</url-pattern>
+  </servlet-mapping>
+   <servlet>
+  	<servlet-name>Postuler</servlet-name>
+  	<servlet-class>Controller.Postuler</servlet-class>
+  </servlet> 
+
+<servlet>
+<servlet-name>inscriptionCandidat</servlet-name>
+<servlet-class>Controller.InscriptionCandidat</servlet-class>
+<init-param>
+		<param-name>chemin</param-name> 
+		<param-value>/Users/Abderrahmane/Desktop/www/JobBoard/WebContent/CVs/</param-value> 
+	</init-param>
+<multipart-config>
+		<location>/Users/Abderrahmane/Desktop/www/JobBoard/WebContent/CVs/</location>
+		<max-file-size>10485760</max-file-size> <!-- 10 Mo -->
+		<max-request-size>52428800</max-request-size> <!-- 5 x 10 Mo -->
+		<file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
+</multipart-config>
+</servlet>
+<servlet-mapping>
+<servlet-name>inscriptionCandidat</servlet-name>
+<url-pattern>/inscriptionC</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>inscriptionRecruteur</servlet-name>
+<servlet-class>Controller.InscriptionRecruteur</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>inscriptionRecruteur</servlet-name>
+<url-pattern>/inscriptionR</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>nouvelleOffre</servlet-name>
+<servlet-class>Controller.NouvelleOffre</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>nouvelleOffre</servlet-name>
+<url-pattern>/OffreAjoutee</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Download</servlet-name>
+	<servlet-class>Controller.Download</servlet-class>
+	<init-param>
+		<param-name>chemin</param-name> 
+		<param-value>/Users/Abderrahmane/Desktop/www/JobBoard/WebContent/CVs/</param-value> 
+	</init-param>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Download</servlet-name>
+	<url-pattern>/CVs/*</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>connexion</servlet-name>
+  	<servlet-class>Controller.Connexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>connexion</servlet-name>
+  	<url-pattern>/authenticate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>offres</servlet-name>
+  	<servlet-class>Controller.Offres</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>offres</servlet-name>
+  	<url-pattern>/offres</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>newoffre</servlet-name>
+  	<servlet-class>Controller.NouvelleOffre</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>newoffre</servlet-name>
+  	<url-pattern>/newOffre</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>Candidats</servlet-name>
+  	<servlet-class>Controller.Candidats</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Candidats</servlet-name>
+  	<url-pattern>/candidates</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>acceuilRecruteur</servlet-name>
+  	<servlet-class>Controller.AcceuilRecruteur</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>acceuilRecruteur</servlet-name>
+  	<url-pattern>/recserv</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>AcceuilCandidat</servlet-name>
+  	<servlet-class>Controller.AcceuilCandidat</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>AcceuilCandidat</servlet-name>
+  	<url-pattern>/homecandidat</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+  	<servlet-name>Deconnexion</servlet-name>
+  	<servlet-class>Controller.Deconnexion</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>Deconnexion</servlet-name>
+  	<url-pattern>/deconnexion</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>ModifierRecruteur</servlet-name>
+  	<servlet-class>Controller.ModifierRecruteur</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>ModifierRecruteur</servlet-name>
+  	<url-pattern>/updaterec</url-pattern>
+  </servlet-mapping>
+
+     <servlet>
+  	<servlet-name>ModifierCandidat</servlet-name>
+  	<servlet-class>Controller.ModifierCandidat</servlet-class>
+  	<init-param>
+		<param-name>chemin</param-name> 
+		<param-value>/Users/Abderrahmane/Desktop/www/JobBoard/WebContent/CVs/</param-value> 
+	</init-param>
+<multipart-config>
+		<location>/Users/Abderrahmane/Desktop/www/JobBoard/WebContent/CVs/</location>
+		<max-file-size>10485760</max-file-size> <!-- 10 Mo -->
+		<max-request-size>52428800</max-request-size> <!-- 5 x 10 Mo -->
+		<file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
+</multipart-config>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>ModifierCandidat</servlet-name>
+  	<url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+  	<servlet-name>DetailsCandidat</servlet-name>
+  	<servlet-class>Controller.CandidatDetails</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>DetailsCandidat</servlet-name>
+  	<url-pattern>/candidat</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

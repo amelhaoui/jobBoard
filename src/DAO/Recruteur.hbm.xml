@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="DAO.Recruteur" table="RECRUTEURS" >
+
+	<id name="idUtilisateur" column="ID_UTILISATEUR"  >
+		<generator class="native"></generator>
+	</id>
+	
+	<property name="nom"></property>
+	<property name="prenom"></property>
+	<property name="email"></property>
+	<property name="passWord"></property>
+	<property name="tel"></property>
+	<property name="nomEntreprise"></property>
+	<property name="adresseEntreprise"></property>
+	<property name="siteWebEntreprise"></property>
+	<property name="villeEntreprise"></property>
+	<property name="paysEntreprise"></property>
+	<property name="codePostal"></property>
+	<property name="descriptionEntreprise"></property>
+	
+	
+	
+	<set name="offres" table="RECRUTEUR_OFFRE" lazy="false"  >
+        <key column="ID_UTILISATEUR"/>
+        <many-to-many column="ID_OFFRE" class="DAO.Offre"/>
+    </set>
+        
+    <set name="motsCles" table="RECRUTEUR_MOTS_CLES" lazy="false" >
+            <key column="ID_UTILISATEUR"/>
+            <element type="string" column="MOTS_CLES"/>
+        </set>    
+	
+</class>
+ 
+  
+</hibernate-mapping>
